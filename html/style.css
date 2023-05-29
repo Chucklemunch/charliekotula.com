@@ -1,0 +1,72 @@
+.body {
+	display: grid;
+	grid-template-columns: repeat(1, 1fr);
+	grid-template-rows: 45px auto;
+	justify-content: center;
+	margin-top: 0;
+	margin-left: 0;
+	margin-right: 0;
+}
+
+/* Styling for navigation bar */
+#topnav {
+	grid-row: 1;
+	display: grid;
+	grid-template-columns: 1fr 3fr 1fr;
+	margin-left: 0;
+	background-color: #003768;
+	overflow: hidden;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: 45px;
+	
+}
+
+#topnav a {
+	float: none;
+	text-align: center;
+	color: #f2f2f2;
+	padding: 15px 20px;
+	font-size: 14px;
+	font-family: Arial;
+	text-decoration: none;
+}
+
+#topnav a:hover {
+	color: rgb(238, 242, 12);
+}
+
+#topnav a.active {
+	background-color: white;
+	color: #003768;
+}
+
+#Home {
+	grid-column: 1;
+}
+
+#ypgg {
+	grid-column: 2;
+}
+
+#about {
+	grid-column: 3;
+}
+
+#puppy {
+	grid-row: 2;
+	width: 100%;
+	height: auto;
+}
+
+#babyYoda {
+	grid-row: 2;
+	width: 100%;
+	height: auto;
+}
+
+.para {
+	grid-row: 2;
+	margin-left: 15px;
+}
