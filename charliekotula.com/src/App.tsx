@@ -1,10 +1,12 @@
 import React from 'react';
+import Button from "@mui/material/Button";
 import logo from './logo.svg';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
+      <Button variant="contained">Contained</Button>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
