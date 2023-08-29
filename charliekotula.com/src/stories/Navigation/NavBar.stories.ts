@@ -20,7 +20,6 @@ export const NavBarStory: Story = {
     args: {
         pages: ["Home", "YPGG", "About"],
         pagePaths: ["/", "/", "/"],
-        
         currentPage: 1
     },
 };

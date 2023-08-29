@@ -11,6 +11,7 @@ import { NavBar } from './stories/Navigation/NavBar';
 function About() {
   return (
     <div className="About">
+      <title>About</title>
       <NavBar 
         pages={["Home", "A Young Person's Guide to the Galaxy", "About"]}
         pagePaths={["./", "./ypgg", "./about"]}

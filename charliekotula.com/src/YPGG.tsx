@@ -11,6 +11,7 @@ import { NavBar } from './stories/Navigation/NavBar';
 function YPGG() {
   return (
     <div className="YPGG">
+      <title>YPGG</title>
       <NavBar 
         pages={["Home", "A Young Person's Guide to the Galaxy", "About"]}
         pagePaths={["./", "./ypgg", "./about"]}

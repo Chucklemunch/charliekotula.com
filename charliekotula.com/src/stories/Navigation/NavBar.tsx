@@ -1,6 +1,7 @@
 import { IconProps } from "@mui/material/Icon";
 import Button from "@mui/material/Button";
 import AppBar from "@mui/material/AppBar";
+import styled from "@emotion/styled";
 import Box from "@mui/material/Box";
 import { useNavigate } from "react-router-dom";
 import React from "react";
@@ -33,6 +34,9 @@ export const NavBar = ({
                     onClick={() => navigate(pagePaths[0])}
                     sx={{
                     backgroundColor: "white",
+                    "&:hover": {
+                        backgroundColor: "#DD1111"
+                    },
                     maxHeight: 25, 
                     margin: 1, 
                     flexGrow: 2}}
@@ -44,6 +48,9 @@ export const NavBar = ({
                     onClick={() => navigate(pagePaths[1])}
                     sx={{
                     backgroundColor: "white",
+                    "&:hover": {
+                        backgroundColor: "#696969"
+                    },
                     maxHeight: 25, 
                     margin: 1, 
                     flexGrow: 2}}
@@ -55,6 +62,9 @@ export const NavBar = ({
                     onClick={() => navigate(pagePaths[2])}
                     sx={{
                     backgroundColor: "white",
+                    "&:hover": {
+                        backgroundColor: "#1127FF"
+                    },
                     maxHeight: 25, 
                     margin: 1, 
                     flexGrow: 2}}

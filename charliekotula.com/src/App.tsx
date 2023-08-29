@@ -11,11 +11,12 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 function App() {
   return (
     <div className="App">
-        <NavBar 
-          pages={["Home", "A Young Person's Guide to the Galaxy", "About"]}
-          pagePaths={["./", "./ypgg", "./about"]}
-          currentPage={1}
-        />
+      <title>Charlie Kotula</title>
+      <NavBar 
+        pages={["Home", "A Young Person's Guide to the Galaxy", "About"]}
+        pagePaths={["./", "./ypgg", "./about"]}
+        currentPage={1}
+      />
     </div>
   );
 }
