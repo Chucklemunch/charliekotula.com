@@ -22,6 +22,7 @@ type Story = StoryObj<typeof meta>;
 export const BlogStory: Story = {
   args: {
     title: "BlogTest",
-    postedDate: "MM/DD/YYYY"
+    postedDate: "MM/DD/YYYY",
+    
   },
 };

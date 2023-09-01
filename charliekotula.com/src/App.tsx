@@ -1,22 +1,21 @@
 import React from 'react';
 import { NavBar } from './stories/Navigation/NavBar';
+import YinYang from "./images/YinYang.jpg";
 import './App.css';
-import YPGG from './YPGG';
-import About from './About';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 /*
  * Home page for website
  */
 function App() {
   return (
-    <div className="App">
+    <div className="home" style={{display: "grid", gridTemplateRows: "50px 500px 50px", justifyContent: "center"}}>
       <title>Charlie Kotula</title>
       <NavBar 
         pages={["Home", "A Young Person's Guide to the Galaxy", "About"]}
         pagePaths={["./", "./ypgg", "./about"]}
-        currentPage={1}
+        currentPage={0}
       />
+      <img src={YinYang} style={{transform: "translateY(50%)"}}/>
     </div>
   );
 }

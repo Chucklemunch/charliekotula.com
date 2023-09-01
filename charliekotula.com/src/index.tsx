@@ -18,7 +18,6 @@ root.render(
           <Route path="/ypgg" element={<YPGG />} />
           <Route path="/about" element={<About />} />
         </Routes>
-      <App />
     </BrowserRouter>
   </React.StrictMode>
 );
