@@ -1,26 +1,21 @@
 import React from 'react';
-import Button from "@mui/material/Button";
-import logo from './logo.svg';
+import { NavBar } from './stories/Navigation/NavBar';
+import YinYang from "./images/YinYang.jpg";
 import './App.css';
 
+/*
+ * Home page for website
+ */
 function App() {
   return (
-    <div className="App">
-      <Button variant="contained">Contained</Button>
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="home" style={{display: "grid", gridTemplateRows: "50px 500px 50px", justifyContent: "center"}}>
+      <title>Charlie Kotula</title>
+      <NavBar 
+        pages={["Home", "A Young Person's Guide to the Galaxy", "About"]}
+        pagePaths={["./", "./ypgg", "./about"]}
+        currentPage={0}
+      />
+      <img src={YinYang} style={{transform: "translateY(50%)"}}/>
     </div>
   );
 }
