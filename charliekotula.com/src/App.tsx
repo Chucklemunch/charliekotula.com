@@ -1,73 +1,191 @@
-import React from 'react';
-import { NavBar } from './stories/Navigation/NavBar';
+import React, { useState } from 'react';
 import YinYang from "./images/YinYang.jpg";
-import './App.css';
+import Profile from "./images/char_in_suit.jpg"; // your photo
+import {
+  AppBar,
+  Toolbar,
+  Typography,
+  Button,
+  Box,
+  Card,
+  CardContent,
+  Dialog,
+  DialogTitle,
+  IconButton,
+} from "@mui/material";
 
-/*
- * Home page for website
- */
+
 function App() {
+  const [openCV, setOpenCV] = useState(false);
+  const handleOpen = () => setOpenCV(true);
+  const handleClose = () => setOpenCV(false);
+
   return (
- 
-	<div
-      className="home"
-      style={{
-        display: "grid",
-        gridTemplateRows: "50px 500px auto",
-        justifyContent: "center",
-        overflowX: "hidden", // Prevents horizontal scroll caused by animation
+    <Box 
+      sx={{ 
+        minHeight: "100vh", 
+        display: "flex", 
+        flexDirection: "column", 
+        alignItems: "center", 
+        bgcolor: "#fafafa", 
+        position: "relative", 
+        overflow: "hidden"
       }}
     >
       <title>Charlie Kotula</title>
 
-      <NavBar
-        pages={["Home", "A Young Person's Guide to the Galaxy", "About"]}
-        pagePaths={["./", "./ypgg", "./about"]}
-        currentPage={0}
-      />
-			<img
-				src={YinYang}
-				alt="YinYang"
-				style={{
-					transform: "translateY(50%)",
-					margin: "0 auto", // Centers it
-					display: "block", // Required for margin:auto to work
-				}}
-			/>
+      {/* Material UI AppBar */}
+      <AppBar position="static" color="default" elevation={1}>
+        <Toolbar sx={{ justifyContent: "space-between" }}>
+          <Typography variant="h6" sx={{ fontWeight: "bold" }}>
+            Charlie Kotula
+          </Typography>
+          <Box>
+            <Button href="./" color="inherit">Home</Button>
+            <Button href="./ypgg" color="inherit">A Young Person's Guide to the Galaxy</Button>
+            <Button href="./about" color="inherit">About</Button>
+          </Box>
+        </Toolbar>
+      </AppBar>
 
-      <div
-        style={{
-          width: "100vw",
-          overflow: "hidden",
-          whiteSpace: "nowrap",
-          height: "50px",
-          display: "flex",
-          alignItems: "center",
+      {/* Background Yin-Yang */}
+      <Box
+        component="img"
+        src={YinYang}
+        alt="yin yang background"
+        sx={{
+          position: "absolute",
+          top: "50%",
+          left: "50%",
+          width: { xs: 300, md: 800 },
+          opacity: 0.7,
+          transform: "translate(-50%, -50%)",
+          pointerEvents: "none",
+          zIndex: 0
+        }}
+      />
+
+      {/* Center Card */}
+      <Card 
+        sx={{ 
+          mt: 8,
+          p: 4, 
+          position: "sticky",
+          top: "22%",
+          borderRadius: 4, 
+          boxShadow: 6, 
+          textAlign: "center", 
+          zIndex: 1, 
+          maxHeight: 500,
+          maxWidth: 800 
         }}
       >
-        <p className="animate-scroll text-2xl font-medium">
-          Welcome to my website • Check out my projects • Learn about my skills • Cool features coming soon •
-        </p>
-      </div>
+        <Box
+          sx={{
+            width: 250,
+            height: 250,
+            borderRadius: "50%",
+            overflow: "hidden",
+            mx: "auto",
+            mb: 2,
+            boxShadow: 3,
+          }}
+        >
+          <Box
+            component="img"
+            src={Profile}
+            alt="Charlie Kotula"
+            sx={{
+              width: "100%",
+              height: "100%",
+              objectFit: "cover",
+              objectPosition: "center 5%",
+              transform: "scale(1.2)"
+            }}
+          />
+        </Box>
+        <CardContent>
+          <Typography variant="h4" component="h1" gutterBottom>
+            Charlie Kotula
+          </Typography>
+          <Typography variant="body1" color="text.secondary">
+            M.S. Biomedical Data Science
+          </Typography>
+          <Typography variant="body1" color="text.secondary" gutterBottom>
+            B.S. Neurobiology & Computer Science
+          </Typography>
+          <Box sx={{ display: "flex", justifyContent: "center", gap: 2, mt: 2 }}>
+            <Button 
+              variant="contained" 
+              onClick={handleOpen}
+              sx={{ mt: 2, borderRadius: 2 }}
+            >
+              View CV
+            </Button>
+            <Button 
+              variant="contained"
+              href="./about"
+              sx={{ mt: 2, borderRadius: 2}}
+            >
+              About Me
+            </Button>
+          </Box>
 
-      {/* Embedded style (or move this to App.css for clarity) */}
-      <style>{`
-        @keyframes scroll {
-          0% {
-            transform: translateX(100%);
-          }
-          100% {
-            transform: translateX(-100%);
-          }
-        }
-        .animate-scroll {
-          display: inline-block;
-          animation: scroll 15s linear infinite;
-          white-space: nowrap;
-        }
-      `}</style>
+          {/* PDF Popup */}
+          <Dialog open={openCV} onClose={handleClose} maxWidth="lg" fullWidth>
+            <DialogTitle sx={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+              My CV
+              <IconButton onClick={handleClose} aria-label="close">
+                <span style={{ fontSize: 20, lineHeight: 1, fontWeight: 600 }}>×</span>
+              </IconButton>
+            </DialogTitle>
+            <Box sx={{ height: "80vh" }}>
+              <iframe
+                src="/CV_Charles_Kotula.pdf"
+                title="CV"
+                width="100%"
+                height="100%"
+                style={{ border: "none" }}
+              />
+            </Box>
+          </Dialog>
 
-    </div>
+          {/* Social icons at the bottom */}
+          <Box sx={{ display: "flex", justifyContent: "center", gap: 2, mt: 2 }}>
+            {/* GitHub */}
+            <IconButton 
+              aria-label="GitHub" 
+              href="https://github.com/Chucklemunch" 
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
+              <Box
+                component="img"
+                src='/github-mark.png'
+                alt="GitHub"
+                sx={{ width: 32, height: 32 }}
+              />
+            </IconButton>
+            {/* Substack */}
+            <IconButton 
+              aria-label="Substack" 
+              href="https://substack.com/@charliekotula?utm_source=user-menu" 
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
+              <Box
+                component="img"
+                src='/substack.png'
+                alt="Substack"
+                sx={{ width: 32, height: 32 }}
+              />
+            </IconButton>
+          </Box>
+        </CardContent>
+      </Card>
+
+      
+    </Box>
   );
 }
 

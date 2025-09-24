@@ -26,7 +26,7 @@ export const NavBar = ({
     let aboutTabColor = "white";
     switch(currentPage) {
         case 0:
-            homeTabColor = "DD1111";
+            homeTabColor = "#DD1111";
             break;
         case 1:
             ypggTabColor = "#696969";
@@ -58,7 +58,8 @@ export const NavBar = ({
                     maxHeight: 25, 
                     margin: 1, 
                     padding: 1,
-                    flexGrow: 2}}
+                    flexGrow: 1
+                }}
                 >
                     {pages[0]}
                 </Button>
@@ -73,7 +74,7 @@ export const NavBar = ({
                     maxHeight: 25, 
                     margin: 1, 
                     padding: 1,
-                    flexGrow: 2}}
+                    flexGrow: 1}}
                 >
                     {pages[1]}
                 </Button>
@@ -88,7 +89,7 @@ export const NavBar = ({
                     maxHeight: 25, 
                     margin: 1, 
                     padding: 1,
-                    flexGrow: 2}}
+                    flexGrow: 1}}
                 >
                     {pages[2]}
                 </Button>
