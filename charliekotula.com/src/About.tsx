@@ -72,7 +72,7 @@ function About() {
           </Typography>
           <Typography variant="body1">
             I am a biomedical data scientist with a passion for computational biology and ethical applications of machine learning. 
-            In my free time, I enjoy adventuring outside, playing guitar and piano, training jiu-jitsu, writing, coding, and spending time with wonderful people.
+            In my free time, I enjoy adventuring, playing guitar and piano, training jiu-jitsu, writing, coding, and spending time with wonderful people.
           </Typography>
         </CardContent>
       </Card>

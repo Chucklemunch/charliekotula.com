@@ -24,6 +24,7 @@ function CircularImage({ img, x, y, imgSize }: CircularImageProps) {
         width: 500,
         height: 500,
         mt: 7,
+        mx: 2,
         borderRadius: 2,
         overflow: "hidden",
         cursor: "pointer",
