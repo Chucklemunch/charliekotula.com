@@ -177,6 +177,19 @@ function App() {
                 component="img"
                 src='/substack.png'
                 alt="Substack"
+                sx={{ width: 45, height: 45 }}
+              />
+            </IconButton>
+            <IconButton 
+              aria-label="LinkedIn" 
+              href="https://www.linkedin.com/in/charlie-kotula-50b5bb229/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
+              <Box
+                component="img"
+                src='/LI-In-Bug.png'
+                alt="LinkedIn"
                 sx={{ width: 32, height: 32 }}
               />
             </IconButton>
