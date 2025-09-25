@@ -31,8 +31,6 @@ function YPGG() {
 		</Toolbar>
 		</AppBar>
 		<YPGGCard />
-			
-
     </div>
   );
 }

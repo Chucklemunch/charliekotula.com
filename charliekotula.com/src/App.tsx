@@ -193,6 +193,19 @@ function App() {
                 sx={{ width: 32, height: 32 }}
               />
             </IconButton>
+            <IconButton 
+              aria-label="GoogleScholar" 
+              href="https://scholar.google.com/citations?user=K40kNiMAAAAJ&hl=en" 
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
+              <Box
+                component="img"
+                src='/google_scholar.png'
+                alt="GoogleScholar"
+                sx={{ width: 32, height: 32 }}
+              />
+            </IconButton>
           </Box>
         </CardContent>
       </Card>
