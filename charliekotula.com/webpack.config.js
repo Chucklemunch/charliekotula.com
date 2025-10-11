@@ -27,13 +27,6 @@ export default {
   module: {
     rules: [
       {
-        test: /bootstrap\.tsx$/,
-        loader: "bundle-loader",
-        // options: {
-        //   lazy: true,
-        // },
-      },
-      {
         test: /\.css$/i,
         use: ['style-loader', 'css-loader'],
       },
@@ -42,7 +35,10 @@ export default {
         loader: "babel-loader",
         exclude: /node_modules/,
         options: {
-          presets: ["@babel/preset-react", "@babel/preset-typescript"],
+          presets: [
+            ["@babel/preset-react", {runtime: "automatic"}], 
+            "@babel/preset-typescript"
+          ],
         },
       },    
       {
@@ -51,7 +47,7 @@ export default {
         generator: {
             filename: "images/[name][hash][ext][query]",
         },
-    },
+      },
     ],
   },
   plugins: [
@@ -70,10 +66,6 @@ export default {
     }),
     new HtmlWebpackPlugin({
       template: "./public/index.html",
-    //   template: "./index.html",
     }),
-    // new webpack.ProvidePlugin({
-    //     Buffer: ['buffer', 'Buffer']
-    // })
   ],
 };
