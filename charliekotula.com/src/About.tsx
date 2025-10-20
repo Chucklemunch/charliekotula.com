@@ -23,8 +23,8 @@ function About() {
   { src: "/contemplating_life.jpg", description: "Peace" },
 ]
 
-  const radius = 300;
-  const imgSize = 500;
+  const radius = 250;
+  const imgSize = 350;
   // const [hoveredText, setHoveredText]
 
 
