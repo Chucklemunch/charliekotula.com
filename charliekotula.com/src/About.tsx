@@ -16,11 +16,11 @@ import CircularImage from "./CircularImg";
  */
 function About() {
   const images = [
-  { src: "/char_golf.jpg", description: "Golf... but in crocs... and using food as golf balls." },
-  { src: "/char_jonathan_bjj.jpg", description: "I love training brazilian jiu-jitsu! It helps cultivate humility, patience, and a sense of community." },
-  { src: "/char_river.jpg", description: "I am a waterdog." },
-  { src: "/char_stringray.jpg", description: "The stingray couldn't help itself." },
-  { src: "/contemplating_life.jpg", description: "I do my best to slow down and appreciate the beauty around me. It's difficult, but essential, when life is riddled with chaos and turbulence." },
+  { src: "/char_golf.jpg", description: "Fun" },
+  { src: "/char_jonathan_bjj.jpg", description: "Community" },
+  { src: "/char_river.jpg", description: "Silliness" },
+  { src: "/char_stringray.jpg", description: "Adventure" },
+  { src: "/contemplating_life.jpg", description: "Peace" },
 ]
 
   const radius = 300;
