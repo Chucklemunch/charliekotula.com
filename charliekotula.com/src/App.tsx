@@ -42,14 +42,14 @@ function App() {
           </Typography>
           <Box>
             <Button href="./" color="inherit">Home</Button>
-            <Button href="./ypgg" color="inherit">A Young Person's Guide to the Galaxy</Button>
+            {/* <Button href="./ypgg" color="inherit">A Young Person's Guide to the Galaxy</Button> */}
             <Button href="./about" color="inherit">About</Button>
           </Box>
         </Toolbar>
       </AppBar>
 
       {/* Background Yin-Yang */}
-      <Box
+      {/* <Box
         component="img"
         src={YinYang}
         alt="yin yang background"
@@ -63,7 +63,7 @@ function App() {
           pointerEvents: "none",
           zIndex: 0
         }}
-      />
+      /> */}
 
       {/* Center Card */}
       <Card 
@@ -93,14 +93,14 @@ function App() {
         >
           <Box
             component="img"
-            src={Profile}
+            src={'char_alex_wed.png'}
             alt="Charlie Kotula"
             sx={{
               width: "100%",
               height: "100%",
               objectFit: "cover",
               objectPosition: "center 5%",
-              transform: "scale(1.2)"
+              transform: "scale(1)"
             }}
           />
         </Box>
@@ -141,7 +141,7 @@ function App() {
             </DialogTitle>
             <Box sx={{ height: "80vh" }}>
               <iframe
-                src="/CV_Charles_Kotula.pdf"
+                src="/CV_Charles_Kotula_20251110.pdf"
                 title="CV"
                 width="100%"
                 height="100%"

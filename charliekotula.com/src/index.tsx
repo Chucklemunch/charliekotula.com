@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
-import YPGG from './YPGG';
+// import YPGG from './YPGG';
 import About from './About';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import reportWebVitals from './reportWebVitals';
@@ -14,7 +14,7 @@ root.render(
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<App />} />
-          <Route path="/ypgg" element={<YPGG />} />
+          {/* <Route path="/ypgg" element={<YPGG />} /> */}
           <Route path="/about" element={<About />} />
         </Routes>
     </BrowserRouter>

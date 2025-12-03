@@ -25,7 +25,7 @@ function YPGG() {
 			</Typography>
 			<Box>
 			<Button href="./" color="inherit">Home</Button>
-			<Button href="./ypgg" color="inherit">A Young Person's Guide to the Galaxy</Button>
+			{/* <Button href="./ypgg" color="inherit">A Young Person's Guide to the Galaxy</Button> */}
 			<Button href="./about" color="inherit">About</Button>
 			</Box>
 		</Toolbar>
