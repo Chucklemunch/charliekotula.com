@@ -152,7 +152,7 @@ const About: React.FC = () => {
           </Typography>
           <Typography variant="body1">
             I'm actively searching for employment as an ML developer/researcher in medicine and biotech!
-            Please feel to reach out via email or LinkedIn with regards to any employement opportunities,
+            Please feel to reach out via email or LinkedIn with regards to any employment opportunities,
             or if you just want to chat! I'm highly responsive on both platforms.
           </Typography>
 
