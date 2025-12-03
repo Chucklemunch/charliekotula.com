@@ -151,9 +151,9 @@ const About: React.FC = () => {
             Let's Connect!
           </Typography>
           <Typography variant="body1">
-            I'm exploring opportunities in ML, biotech, food science, and computational
-            biology. If you're working on meaningful problems in these areas, I'd love to
-            talk.
+            I'm actively searching for employment as an ML developer/researcher in medicine and biotech!
+            Please feel to reach out via email or LinkedIn with regards to any employement opportunities,
+            or if you just want to chat! I'm highly responsive on both platforms.
           </Typography>
 
           <Stack direction="row" spacing={2}>
@@ -161,7 +161,6 @@ const About: React.FC = () => {
               Email Me
             </Button>
             <Button variant="outlined" href="https://www.linkedin.com/in/charliekotula/">LinkedIn</Button>
-            <Button variant="outlined" href="https://github.com/Chucklemunch" >GitHub</Button>
           </Stack>
         </Stack>
       </Box>
