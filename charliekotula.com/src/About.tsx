@@ -78,7 +78,7 @@ const About: React.FC = () => {
             </Typography>
             <Typography variant="body1" sx={{ mb: 3 }}>
               I'm motivated by truth, benevolence, and discovery. I'm inspired
-              by the potential of computational tool to improving human flourishing, 
+              by the potential of computational tools to improve human flourishing, 
               and my goal is to contribute to systems do just that.
             </Typography>
 
@@ -86,7 +86,7 @@ const About: React.FC = () => {
               Background
             </Typography>
             <Typography variant="body1">
-              I studied Neurobiology and Computer Science before beginning my MS in
+              I studied Neurobiology and Computer Science before completing my MS in
               Biomedical Data Science. During my studies, I worked extensively with 
               electronic health record (EHR) data to develop multimodal ML models
               for predicting clinical deterioration. My personal projects have explored
@@ -104,7 +104,7 @@ const About: React.FC = () => {
               />
               <Typography variant="body1" textAlign="center">
                 Outside of work, I train Brazilian jiu-jitsu, play guitar and piano, and
-                write. I'm quite introverted, yet I'm often described me as a Golden Retriever.
+                write. I'm quite introverted, yet I'm often described as a Golden Retriever.
                 I love meeting new people, am very playful, and always love a good opportunity to
                 roll around in the grass.
               </Typography>
