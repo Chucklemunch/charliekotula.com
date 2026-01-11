@@ -55,7 +55,7 @@ const About: React.FC = () => {
             Hi! I’m Charlie Kotula :)
           </Typography>
           <Typography variant="h5" color="text.secondary">
-            I’m a biomedical data scientist exploring how to build ethical, intelligent
+            I’m a machine learning engineer exploring how to build ethical, intelligent
             systems in biotech and medicine.
           </Typography>
         </Stack>
@@ -66,31 +66,31 @@ const About: React.FC = () => {
           {/* LEFT: Story */}
           <Grid item xs={12} md={7}>
             <Typography variant="h5" fontWeight={600} sx={{ mb: 2 }}>
-              My Work
+              What I Do
             </Typography>
             <Typography variant="body1" sx={{ mb: 3 }}>
               I work at the intersection of machine learning and medicine. My projects have explored multimodal modeling for clinical deterioration, 
               explainability (XAI), time-series modeling, transformers, and foundation models.
             </Typography>
 
-            <Typography variant="h5" fontWeight={600} sx={{ mb: 2 }}>
+            <Typography variant="h5" fontWeight={600} sx={{ mb: 2, mr: 5 }}>
               Why I Do It
             </Typography>
-            <Typography variant="body1" sx={{ mb: 3 }}>
+            <Typography variant="body1" sx={{ mb: 3, mr: 5 }}>
               I'm motivated by truth, benevolence, and discovery. I'm inspired
               by the potential of computational tools to improve human flourishing, 
-              and my goal is to contribute to systems do just that.
+              and my goal is to actualize it.
             </Typography>
 
-            <Typography variant="h5" fontWeight={600} sx={{ mb: 2 }}>
-              Background
+            <Typography variant="h5" fontWeight={600} sx={{ mb: 2, mr: 5 }}>
+              How I Got Here
             </Typography>
             <Typography variant="body1">
               I studied Neurobiology and Computer Science before completing my MS in
               Biomedical Data Science. During my studies, I worked extensively with 
               electronic health record (EHR) data to develop multimodal ML models
               for predicting clinical deterioration. My personal projects have explored
-              foundation models for pathology, language models for music, and a little bit
+              Retrieval-Augmented Generation (RAG) for health coaching, foundation models for pathology, language models for music, and a sprinkle
               of web development.
             </Typography>
           </Grid>
@@ -99,8 +99,8 @@ const About: React.FC = () => {
           <Grid item xs={12} md={5}>
             <Stack alignItems="center" spacing={3}>
               <Avatar
-                src='char_alex_wed.png'
-                sx={{ width: 160, height: 160 }}
+                src='char_on_rocks_dk.png'
+                sx={{ width: 500, height: 500 }}
               />
               <Typography variant="body1" textAlign="center">
                 Outside of work, I train Brazilian jiu-jitsu, play guitar and piano, and

@@ -141,7 +141,7 @@ function App() {
             </DialogTitle>
             <Box sx={{ height: "80vh" }}>
               <iframe
-                src="/CV_Charles_Kotula_20251210.pdf"
+                src="/CV_Charles_Kotula-ML_Engineer.pdf"
                 title="CV"
                 width="100%"
                 height="100%"
