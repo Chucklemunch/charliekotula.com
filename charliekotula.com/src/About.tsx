@@ -1,8 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   AppBar,
   Toolbar,
-
   Box,
   Typography,
   Grid,
@@ -12,6 +11,10 @@ import {
   Divider,
   Avatar,
   Button,
+  Dialog,
+  DialogTitle,
+  IconButton,
+  Tooltip,
 } from "@mui/material";
 
 const highlights = [
@@ -22,6 +25,12 @@ const highlights = [
     url: "https://www.jmir.org/2025/1/e75340"
   },
   {
+    title: "AgentP",
+    description:
+      "A RAG-based physical medicine and rehabilitation coach.",
+    url: "https://agentp.charliekotula.com"
+  },
+  {
     title: "Muse",
     description:
       "An AI music jamming app that allows you to trade bars with a music model!",
@@ -30,32 +39,94 @@ const highlights = [
 ];
 
 const About: React.FC = () => {
-  return (
+  const [openCV, setOpenCV] = useState(false);
+  const handleOpen = () => setOpenCV(true);
+  const handleClose = () => setOpenCV(false);
 
+  return (
     <Box>
       <AppBar position="static" color="default" elevation={1}>
-      <Toolbar sx={{ justifyContent: "space-between" }}>
-        <Typography variant="h6" sx={{ fontWeight: "bold" }}>
-        Charlie Kotula
-        </Typography>
-        <Box>
-        <Button href="./" color="inherit">Home</Button>
-        {/* <Button href="./ypgg" color="inherit">A Young Person's Guide to the Galaxy</Button> */}
-        <Button href="./about" color="inherit">About</Button>
-        </Box>
-      </Toolbar>
+        <Toolbar sx={{ justifyContent: "space-between" }}>
+          <Typography variant="h6" sx={{ fontWeight: "bold" }}>
+            Charlie Kotula
+          </Typography>
+          <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
+            <Tooltip title="LinkedIn">
+              <IconButton
+                aria-label="LinkedIn"
+                href="https://www.linkedin.com/in/charlie-kotula-50b5bb229/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Box component="img" src="/LI-In-Bug.png" alt="LinkedIn" sx={{ width: 24, height: 24 }} />
+              </IconButton>
+            </Tooltip>
+            <Tooltip title="Google Scholar">
+              <IconButton
+                aria-label="Google Scholar"
+                href="https://scholar.google.com/citations?user=K40kNiMAAAAJ&hl=en"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Box component="img" src="/google_scholar.png" alt="Google Scholar" sx={{ width: 24, height: 24 }} />
+              </IconButton>
+            </Tooltip>
+            <Tooltip title="GitHub">
+              <IconButton
+                aria-label="GitHub"
+                href="https://github.com/Chucklemunch"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Box component="img" src="/github-mark.png" alt="GitHub" sx={{ width: 24, height: 24 }} />
+              </IconButton>
+            </Tooltip>
+            <Tooltip title="Substack">
+              <IconButton
+                aria-label="Substack"
+                href="https://substack.com/@charliekotula?utm_source=user-menu"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Box component="img" src="/substack.png" alt="Substack" sx={{ width: 32, height: 32 }} />
+              </IconButton>
+            </Tooltip>
+            <Tooltip title="CV">
+              <Button color="inherit" onClick={handleOpen}>CV</Button>
+            </Tooltip>
+          </Box>
+        </Toolbar>
       </AppBar>
 
-      {/*All the other important stuff*/}
+      {/* CV Modal */}
+      <Dialog open={openCV} onClose={handleClose} maxWidth="lg" fullWidth>
+        <DialogTitle sx={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+          My CV
+          <IconButton onClick={handleClose} aria-label="close">
+            <span style={{ fontSize: 20, lineHeight: 1, fontWeight: 600 }}>×</span>
+          </IconButton>
+        </DialogTitle>
+        <Box sx={{ height: "80vh" }}>
+          <iframe
+            src="/CV_Charles_Kotula.pdf"
+            title="CV"
+            width="100%"
+            height="100%"
+            style={{ border: "none" }}
+          />
+        </Box>
+      </Dialog>
+
+      {/* All the other important stuff */}
       <Box sx={{ px: { xs: 3, md: 8 }, py: 6, maxWidth: "1000px", mx: "auto" }}>
-        
+
         {/* HERO SECTION */}
         <Stack spacing={2} sx={{ mb: 6, textAlign: "left" }}>
           <Typography variant="h3" fontWeight={700}>
-            Hi! I’m Charlie Kotula :)
+            Hi! I'm Charlie Kotula :)
           </Typography>
           <Typography variant="h5" color="text.secondary">
-            I’m a machine learning engineer exploring how to build ethical, intelligent
+            I'm a machine learning engineer exploring how to build ethical, intelligent
             systems in biotech and medicine.
           </Typography>
         </Stack>
@@ -69,7 +140,7 @@ const About: React.FC = () => {
               What I Do
             </Typography>
             <Typography variant="body1" sx={{ mb: 3 }}>
-              I work at the intersection of machine learning and medicine. My projects have explored multimodal modeling for clinical deterioration, 
+              I work at the intersection of machine learning and medicine. My projects have explored multimodal modeling for clinical deterioration,
               explainability (XAI), time-series modeling, transformers, and foundation models.
             </Typography>
 
@@ -78,7 +149,7 @@ const About: React.FC = () => {
             </Typography>
             <Typography variant="body1" sx={{ mb: 3, mr: 5 }}>
               I'm motivated by truth, benevolence, and discovery. I'm inspired
-              by the potential of computational tools to improve human flourishing, 
+              by the potential of computational tools to improve human flourishing,
               and my goal is to actualize it.
             </Typography>
 
@@ -87,7 +158,7 @@ const About: React.FC = () => {
             </Typography>
             <Typography variant="body1">
               I studied Neurobiology and Computer Science before completing my MS in
-              Biomedical Data Science. During my studies, I worked extensively with 
+              Biomedical Data Science. During my studies, I worked extensively with
               electronic health record (EHR) data to develop multimodal ML models
               for predicting clinical deterioration. My personal projects have explored
               Retrieval-Augmented Generation (RAG) for health coaching, foundation models for pathology, language models for music, and a sprinkle
