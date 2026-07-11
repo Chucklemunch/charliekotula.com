@@ -126,8 +126,9 @@ const About: React.FC = () => {
             Hi! I'm Charlie Kotula :)
           </Typography>
           <Typography variant="h5" color="text.secondary">
-            I'm a machine learning engineer exploring how to build ethical, intelligent
-            systems in biotech and medicine.
+            I'm a biosecurity researcher and SecureBio fellow working to reduce
+            catastrophic biological risk, with a background in machine learning
+            for biotech and medicine.
           </Typography>
         </Stack>
 
@@ -140,17 +141,19 @@ const About: React.FC = () => {
               What I Do
             </Typography>
             <Typography variant="body1" sx={{ mb: 3 }}>
-              I work at the intersection of machine learning and medicine. My projects have explored multimodal modeling for clinical deterioration,
-              explainability (XAI), time-series modeling, transformers, and foundation models.
+              As a fellow with SecureBio, I work on biosecurity: reducing the risk
+              of catastrophic biological events, whether natural, accidental, or
+              deliberate. I draw on a machine learning background spanning multimodal
+              modeling for clinical deterioration, explainability (XAI), time-series
+              modeling, transformers, and foundation models.
             </Typography>
 
             <Typography variant="h5" fontWeight={600} sx={{ mb: 2, mr: 5 }}>
               Why I Do It
             </Typography>
             <Typography variant="body1" sx={{ mb: 3, mr: 5 }}>
-              I'm motivated by truth, benevolence, and discovery. I'm inspired
-              by the potential of computational tools to improve human flourishing,
-              and my goal is to actualize it.
+              I'm motivated by truth and discovery, and by how we can wield technology
+              responsibly to move society forward.
             </Typography>
 
             <Typography variant="h5" fontWeight={600} sx={{ mb: 2, mr: 5 }}>
@@ -162,7 +165,8 @@ const About: React.FC = () => {
               electronic health record (EHR) data to develop multimodal ML models
               for predicting clinical deterioration. My personal projects have explored
               Retrieval-Augmented Generation (RAG) for health coaching, foundation models for pathology, language models for music, and a sprinkle
-              of web development.
+              of web development. That mix of biology and computation led me to biosecurity,
+              and to my current fellowship with SecureBio.
             </Typography>
           </Grid>
 
@@ -222,9 +226,10 @@ const About: React.FC = () => {
             Let's Connect!
           </Typography>
           <Typography variant="body1">
-            I'm actively searching for employment as an ML developer/researcher in medicine and biotech!
-            Please feel to reach out via email or LinkedIn with regards to any employment opportunities,
-            or if you just want to chat! I'm highly responsive on both platforms.
+            I'm always happy to talk biosecurity, machine learning, or anything at the
+            intersection of biology and computation. Please feel free to reach out via
+            email or LinkedIn, whether to collaborate or just to chat! I'm highly
+            responsive on both platforms.
           </Typography>
 
           <Stack direction="row" spacing={2}>

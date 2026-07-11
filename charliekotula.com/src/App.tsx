@@ -109,6 +109,9 @@ function App() {
             Charlie Kotula
           </Typography>
           <Typography variant="body1" color="text.secondary">
+            Biosecurity Researcher · SecureBio Fellow
+          </Typography>
+          <Typography variant="body1" color="text.secondary">
             M.S. Biomedical Data Science
           </Typography>
           <Typography variant="body1" color="text.secondary" gutterBottom>
