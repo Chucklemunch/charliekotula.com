@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import About from './About';
+import Blog from './blog/Blog';
+import BlogPostPage from './blog/BlogPostPage';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import reportWebVitals from './reportWebVitals';
 
@@ -13,6 +15,9 @@ root.render(
         <Routes>
           <Route path="/" element={<About />} />
           <Route path="/about" element={<About />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:pub" element={<Blog />} />
+          <Route path="/blog/:pub/:slug" element={<BlogPostPage />} />
         </Routes>
     </BrowserRouter>
   </React.StrictMode>

@@ -1,7 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
+import SiteHeader from "./SiteHeader";
 import {
-  AppBar,
-  Toolbar,
   Box,
   Typography,
   Grid,
@@ -11,10 +10,6 @@ import {
   Divider,
   Avatar,
   Button,
-  Dialog,
-  DialogTitle,
-  IconButton,
-  Tooltip,
 } from "@mui/material";
 
 const highlights = [
@@ -30,92 +25,12 @@ const highlights = [
       "A RAG-based physical medicine and rehabilitation coach.",
     url: "https://agentp.charliekotula.com"
   },
-  {
-    title: "Muse",
-    description:
-      "An AI music jamming app that allows you to trade bars with a music model!",
-    url: "https://muse.charliekotula.com/"
-  },
 ];
 
 const About: React.FC = () => {
-  const [openCV, setOpenCV] = useState(false);
-  const handleOpen = () => setOpenCV(true);
-  const handleClose = () => setOpenCV(false);
-
   return (
     <Box>
-      <AppBar position="static" color="default" elevation={1}>
-        <Toolbar sx={{ justifyContent: "space-between" }}>
-          <Typography variant="h6" sx={{ fontWeight: "bold" }}>
-            Charlie Kotula
-          </Typography>
-          <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
-            <Tooltip title="LinkedIn">
-              <IconButton
-                aria-label="LinkedIn"
-                href="https://www.linkedin.com/in/charlie-kotula-50b5bb229/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Box component="img" src="/LI-In-Bug.png" alt="LinkedIn" sx={{ width: 24, height: 24 }} />
-              </IconButton>
-            </Tooltip>
-            <Tooltip title="Google Scholar">
-              <IconButton
-                aria-label="Google Scholar"
-                href="https://scholar.google.com/citations?user=K40kNiMAAAAJ&hl=en"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Box component="img" src="/google_scholar.png" alt="Google Scholar" sx={{ width: 24, height: 24 }} />
-              </IconButton>
-            </Tooltip>
-            <Tooltip title="GitHub">
-              <IconButton
-                aria-label="GitHub"
-                href="https://github.com/Chucklemunch"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Box component="img" src="/github-mark.png" alt="GitHub" sx={{ width: 24, height: 24 }} />
-              </IconButton>
-            </Tooltip>
-            <Tooltip title="Substack">
-              <IconButton
-                aria-label="Substack"
-                href="https://substack.com/@charliekotula?utm_source=user-menu"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Box component="img" src="/substack.png" alt="Substack" sx={{ width: 32, height: 32 }} />
-              </IconButton>
-            </Tooltip>
-            <Tooltip title="CV">
-              <Button color="inherit" onClick={handleOpen}>CV</Button>
-            </Tooltip>
-          </Box>
-        </Toolbar>
-      </AppBar>
-
-      {/* CV Modal */}
-      <Dialog open={openCV} onClose={handleClose} maxWidth="lg" fullWidth>
-        <DialogTitle sx={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-          My CV
-          <IconButton onClick={handleClose} aria-label="close">
-            <span style={{ fontSize: 20, lineHeight: 1, fontWeight: 600 }}>×</span>
-          </IconButton>
-        </DialogTitle>
-        <Box sx={{ height: "80vh" }}>
-          <iframe
-            src="/CV_Charles_Kotula.pdf"
-            title="CV"
-            width="100%"
-            height="100%"
-            style={{ border: "none" }}
-          />
-        </Box>
-      </Dialog>
+      <SiteHeader />
 
       {/* All the other important stuff */}
       <Box sx={{ px: { xs: 3, md: 8 }, py: 6, maxWidth: "1000px", mx: "auto" }}>
@@ -123,12 +38,11 @@ const About: React.FC = () => {
         {/* HERO SECTION */}
         <Stack spacing={2} sx={{ mb: 6, textAlign: "left" }}>
           <Typography variant="h3" fontWeight={700}>
-            Hi! I'm Charlie Kotula :)
+            Hi! I'm Charlie :)
           </Typography>
           <Typography variant="h5" color="text.secondary">
-            I'm a biosecurity researcher and SecureBio fellow working to reduce
-            catastrophic biological risk, with a background in machine learning
-            for biotech and medicine.
+            I'm a biosecurity researcher working to reduce catastrophic
+            biological risk.
           </Typography>
         </Stack>
 
@@ -138,35 +52,26 @@ const About: React.FC = () => {
           {/* LEFT: Story */}
           <Grid item xs={12} md={7}>
             <Typography variant="h5" fontWeight={600} sx={{ mb: 2 }}>
-              What I Do
+              What
             </Typography>
             <Typography variant="body1" sx={{ mb: 3 }}>
-              As a fellow with SecureBio, I work on biosecurity: reducing the risk
-              of catastrophic biological events, whether natural, accidental, or
-              deliberate. I draw on a machine learning background spanning multimodal
-              modeling for clinical deterioration, explainability (XAI), time-series
-              modeling, transformers, and foundation models.
+              I work on biosecurity: reducing the risk of catastrophic biological
+              events, whether natural, accidental, or deliberate.
             </Typography>
 
             <Typography variant="h5" fontWeight={600} sx={{ mb: 2, mr: 5 }}>
-              Why I Do It
+              Why
             </Typography>
             <Typography variant="body1" sx={{ mb: 3, mr: 5 }}>
               I'm motivated by truth and discovery, and by how we can wield technology
-              responsibly to move society forward.
+              responsibly to build a better future.
             </Typography>
 
             <Typography variant="h5" fontWeight={600} sx={{ mb: 2, mr: 5 }}>
-              How I Got Here
+              How
             </Typography>
             <Typography variant="body1">
-              I studied Neurobiology and Computer Science before completing my MS in
-              Biomedical Data Science. During my studies, I worked extensively with
-              electronic health record (EHR) data to develop multimodal ML models
-              for predicting clinical deterioration. My personal projects have explored
-              Retrieval-Augmented Generation (RAG) for health coaching, foundation models for pathology, language models for music, and a sprinkle
-              of web development. That mix of biology and computation led me to biosecurity,
-              and to my current fellowship with SecureBio.
+              Playfully.
             </Typography>
           </Grid>
 
@@ -177,12 +82,6 @@ const About: React.FC = () => {
                 src='char_on_rocks_dk.png'
                 sx={{ width: 500, height: 500 }}
               />
-              <Typography variant="body1" textAlign="center">
-                Outside of work, I train Brazilian jiu-jitsu, play guitar and piano, and
-                write. I'm quite introverted, yet I'm often described as a Golden Retriever.
-                I love meeting new people, am very playful, and always love a good opportunity to
-                roll around in the grass.
-              </Typography>
             </Stack>
           </Grid>
         </Grid>

@@ -29,7 +29,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "fetch-posts": "node scripts/fetch-substack.mjs"
   },
   "eslintConfig": {
     "extends": [
@@ -61,8 +62,11 @@
     "@storybook/react-webpack5": "^7.3.2",
     "@storybook/testing-library": "^0.2.0",
     "babel-plugin-named-exports-order": "^0.0.2",
+    "cheerio": "^1.2.0",
     "eslint-plugin-storybook": "^0.6.13",
+    "katex": "^0.19.1",
     "prop-types": "^15.8.1",
+    "sanitize-html": "^2.18.2",
     "storybook": "^7.3.2",
     "webpack": "^5.88.2"
   }

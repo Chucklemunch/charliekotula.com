@@ -1,0 +1,16 @@
+[
+  {
+    "id": "ypgg",
+    "name": "A Young Person's Guide to the Galaxy",
+    "tagline": "Last year, a foolish adventurer. This year, no change.",
+    "url": "https://charliekotula.substack.com",
+    "icon": "/ypgg_favicon.png"
+  },
+  {
+    "id": "radical-effort",
+    "name": "Radical Effort",
+    "tagline": "Documenting my effort",
+    "url": "https://radicaleffort.substack.com",
+    "icon": "/radical_effort_favicon.png"
+  }
+]
