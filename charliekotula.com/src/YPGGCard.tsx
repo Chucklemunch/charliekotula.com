@@ -61,7 +61,7 @@ function YPGGCard() {
           <Button
             variant="contained"
             color="primary"
-            href="https://substack.com/@charliekotula?utm_source=user-menu"
+            href="https://charlesallenkotula.substack.com/"
             target="_blank"
             rel="noopener noreferrer"
             sx={{ borderRadius: 2 }}

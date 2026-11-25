@@ -24,5 +24,7 @@ export interface Publication {
   name: string;
   tagline: string;
   url: string;
+  // Old addresses of the publication; links to them in posts get rewritten.
+  previousUrls?: string[];
   icon: string;
 }

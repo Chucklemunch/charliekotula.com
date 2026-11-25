@@ -3,7 +3,8 @@
     "id": "ypgg",
     "name": "A Young Person's Guide to the Galaxy",
     "tagline": "Last year, a foolish adventurer. This year, no change.",
-    "url": "https://charliekotula.substack.com",
+    "url": "https://charlesallenkotula.substack.com",
+    "previousUrls": ["https://charliekotula.substack.com"],
     "icon": "/ypgg_favicon.png"
   },
   {

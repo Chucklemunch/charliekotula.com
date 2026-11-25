@@ -28,14 +28,23 @@ async function getText(url) {
 
 const getJson = async (url) => JSON.parse(await getText(url));
 
-// Links to a post in any of the publications -> the on-site copy.
-function onSitePath(href) {
+const stripScheme = (url) => url.replace(/^https?:\/\//, "");
+
+// Rewrites a link that points at one of the publications (current or old address):
+//   a post        -> the on-site copy, e.g. /blog/ypgg/<slug>
+//   anything else -> the same path on the publication's current address
+// Returns null for links that aren't to a publication.
+function rewritePublicationLink(href) {
+  const target = stripScheme(href);
   for (const pub of PUBLICATIONS) {
-    const prefix = `${pub.url.replace(/^https?:\/\//, "")}/p/`;
-    const m = href.replace(/^https?:\/\//, "").match(/^([^?#]*)/)[1];
-    if (m.startsWith(prefix)) {
-      const slug = m.slice(prefix.length).split("/")[0];
-      if (slug) return `/blog/${pub.id}/${slug}`;
+    for (const base of [pub.url, ...(pub.previousUrls || [])]) {
+      const host = stripScheme(base);
+      if (!target.startsWith(host)) continue;
+      const rest = target.slice(host.length);
+      if (rest && !/^[/?#]/.test(rest)) continue; // e.g. host.evil.com
+      const post = rest.match(/^\/p\/([^/?#]+)/);
+      if (post) return `/blog/${pub.id}/${post[1]}`;
+      return `${pub.url}${rest}`;
     }
   }
   return null;
@@ -83,10 +92,10 @@ function cleanBody(html, postUrl) {
   // Substack UI chrome that means nothing outside Substack.
   $("button, svg, form, input, .subscription-widget-wrap-editor, .subscription-widget, .image-link-expand").remove();
 
-  // Links to posts in any of the publications -> on-site blog links.
+  // Links to any of the publications -> on-site copies / current addresses.
   $("a[href]").each((_, el) => {
-    const local = onSitePath($(el).attr("href"));
-    if (local) $(el).attr("href", local);
+    const rewritten = rewritePublicationLink($(el).attr("href"));
+    if (rewritten) $(el).attr("href", rewritten);
   });
 
   // Image galleries -> a row of figures.
