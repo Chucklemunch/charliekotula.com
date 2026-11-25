@@ -13,7 +13,7 @@ import {
 import { publications } from "./blog/publications";
 
 const socialLinks = [
-  { label: "LinkedIn", href: "https://www.linkedin.com/in/charlie-kotula-50b5bb229/", icon: "/LI-In-Bug.png" },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/charliekotula/", icon: "/LI-In-Bug.png" },
   { label: "Google Scholar", href: "https://scholar.google.com/citations?user=K40kNiMAAAAJ&hl=en", icon: "/google_scholar.png" },
   { label: "GitHub", href: "https://github.com/Chucklemunch", icon: "/github-mark.png" },
 ];

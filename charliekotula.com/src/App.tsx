@@ -185,7 +185,7 @@ function App() {
             </IconButton>
             <IconButton 
               aria-label="LinkedIn" 
-              href="https://www.linkedin.com/in/charlie-kotula-50b5bb229/" 
+              href="https://www.linkedin.com/in/charliekotula/" 
               target="_blank" 
               rel="noopener noreferrer"
             >
